@@ -123,7 +123,6 @@ services:
 
   redis:
     image: bitnami/redis:latest
-    platform: linux/amd64
     restart: always
     volumes:
       - redis-data:/bitnami/redis/data
