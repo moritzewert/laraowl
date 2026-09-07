@@ -123,6 +123,7 @@ services:
 
   redis:
     image: bitnami/redis:latest
+    pull_policy: always
     restart: always
     volumes:
       - redis-data:/bitnami/redis/data
