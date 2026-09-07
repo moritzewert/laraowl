@@ -83,8 +83,8 @@ services:
       app:
         condition: service_started
     ports:
-      - 80:80
-      - 443:443
+      - ${CADDY_PORT:-80}:80
+      - ${CADDY_PORT_SECURE:-443}:443
     volumes:
       - ./docker/Caddyfile:/etc/caddy/Caddyfile
       - storage:/usr/share/caddy/html/storage:rw
